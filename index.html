@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<title>Sníme ho spolu. Vědomě. · Online event 25. června 2026 · Kateřina · HEALLO®</title>
+<meta name="description" content="Online event zdarma. Vědomě sníme jídlo, které nás pronásleduje. 25. června 2026, 19:00, max 10 žen. Pro tělo, které volá po jiné péči.">
+<link rel="canonical" href="https://spolu.jednosousto.online">
+<meta name="theme-color" content="#7a8c6e">
+
+<!-- OG -->
+<meta property="og:type" content="event">
+<meta property="og:title" content="Sníme ho spolu. Vědomě. · Online event 25. června 2026">
+<meta property="og:description" content="Online event zdarma. Vědomě sníme jídlo, které nás pronásleduje. 25. června 2026, 19:00, max 10 žen.">
+<meta property="og:image" content="images/katerina-hero.jpg">
+<meta property="og:locale" content="cs_CZ">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%237a8c6e'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-style='italic' fill='%23fafbf6'>h</text></svg>">
+
+<!-- Flodesk universal script -->
+<script>
+  (function(w, d, t, h, s, n) {
+    w.FlodeskObject = n;
+    var fn = function() { (w[n].q = w[n].q || []).push(arguments); };
+    w[n] = w[n] || fn;
+    var f = d.getElementsByTagName(t)[0];
+    var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+    var sm = d.createElement(t); sm.async = true; sm.type = 'module';
+    sm.src = h + s + '.mjs' + v;
+    f.parentNode.insertBefore(sm, f);
+    var sn = d.createElement(t); sn.async = true; sn.noModule = true;
+    sn.src = h + s + '.js' + v;
+    f.parentNode.insertBefore(sn, f);
+  })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --sage:#7a8c6e;
+  --sage-dark:#5d6e54;
+  --sage-soft:#eef2e7;
+  --sage-mist:#dfe6d4;
+  --cream:#fafbf6;
+  --ink:#1a1a1a;
+  --ink-soft:#3a3a3a;
+  --mute:#8a8a8a;
+  --brand-gold:#a77b00;
+  --hair:rgba(0,0,0,.06);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  font-weight:400;
+  font-size:18px;
+  line-height:1.7;
+  color:var(--ink-soft);
+  background:var(--cream);
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:var(--sage);text-decoration:none}
+
+/* ANNOUNCEMENT BAR */
+.announce{
+  background:var(--sage);
+  color:#fff;
+  padding:14px 24px;
+  text-align:center;
+  font-family:'Inter',sans-serif;
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:1.5px;
+}
+
+/* HERO */
+.hero{
+  min-height:88vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  background:#fff;
+}
+@media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto}}
+
+.hero-photo-wrap{
+  padding:80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+@media(max-width:1100px){.hero-photo-wrap{padding:60px 40px}}
+@media(max-width:900px){.hero-photo-wrap{padding:60px 40px 0;order:2}}
+
+@keyframes morph-photo{
+  0%, 100% { border-radius: 60% 40% 55% 45% / 55% 45% 55% 45%; }
+  25% { border-radius: 50% 50% 45% 55% / 60% 50% 50% 40%; }
+  50% { border-radius: 45% 55% 60% 40% / 50% 55% 45% 50%; }
+  75% { border-radius: 55% 45% 50% 50% / 45% 50% 50% 55%; }
+}
+.hero-photo{
+  width:100%;
+  max-width:440px;
+  aspect-ratio:1;
+  background:url('images/katerina-hero.jpg') center 25%/cover;
+  position:relative;
+  box-shadow:
+    0 30px 80px rgba(122,140,110,.20),
+    0 8px 24px rgba(0,0,0,.08);
+  animation: morph-photo 14s ease-in-out infinite;
+}
+.hero-photo::before{
+  content:'';
+  position:absolute;
+  inset:-30px;
+  background:radial-gradient(ellipse at 30% 30%, var(--sage-mist), transparent 70%);
+  z-index:-1;
+  border-radius:50%;
+}
+@media (prefers-reduced-motion: reduce){.hero-photo{animation:none;border-radius:50%}}
+
+.hero-content{padding:120px 80px 120px 0}
+@media(max-width:1100px){.hero-content{padding:80px 48px 80px 0}}
+@media(max-width:900px){.hero-content{padding:60px 32px 80px}}
+
+.zdarma-tag{
+  display:inline-block;
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--brand-gold);
+  background:rgba(167,123,0,.1);
+  padding:6px 14px;
+  border-radius:100px;
+  margin-bottom:24px;
+}
+.eyebrow{
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--sage);
+  margin-bottom:24px;
+  display:block;
+}
+h1{
+  font-family:'Fraunces',serif;
+  font-weight:300;
+  font-size:clamp(44px,6vw,80px);
+  line-height:1.04;
+  letter-spacing:-0.025em;
+  color:var(--ink);
+  margin-bottom:32px;
+}
+h1 em{font-style:italic;font-weight:400;color:var(--sage)}
+
+.hero-sub{
+  font-family:'Fraunces',serif;
+  font-weight:300;
+  font-style:italic;
+  font-size:22px;
+  line-height:1.55;
+  color:var(--ink-soft);
+  margin-bottom:48px;
+  max-width:480px;
+}
+.cta-link{
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--ink);
+  border-bottom:1px solid var(--ink);
+  padding-bottom:6px;
+  display:inline-block;
+  transition:all .25s;
+}
+.cta-link:hover{color:var(--sage);border-color:var(--sage)}
+.hero-micro{margin-top:48px;font-size:13px;color:var(--mute)}
+
+/* EVENT DETAILS STRIP */
+.event-strip{
+  background:var(--sage-soft);
+  padding:64px 24px;
+  text-align:center;
+}
+.event-strip-inner{
+  max-width:880px;margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:32px;
+}
+@media(max-width:780px){.event-strip-inner{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:500px){.event-strip-inner{grid-template-columns:1fr;gap:24px}}
+.event-strip-item .label{
+  font-family:'Inter',sans-serif;
+  font-size:10px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--sage-dark);
+  font-weight:600;
+  margin-bottom:8px;
+  display:block;
+}
+.event-strip-item .value{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:30px;
+  color:var(--ink);
+  line-height:1.1;
+}
+.event-strip-item .sub{font-size:13px;color:var(--ink-soft);margin-top:6px;font-style:normal;font-family:'Inter',sans-serif;font-weight:400}
+
+/* BODY SECTIONS */
+.body-section{padding:140px 24px;background:#fff}
+.body-section.cream{background:var(--cream)}
+.body-section.sage{background:var(--sage-soft)}
+.body-inner{max-width:680px;margin:0 auto}
+.body-inner.center{text-align:center}
+
+.section-label{
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--sage);
+  margin-bottom:32px;
+}
+h2{
+  font-family:'Fraunces',serif;
+  font-weight:300;
+  font-size:clamp(36px,5vw,58px);
+  line-height:1.1;
+  letter-spacing:-0.02em;
+  color:var(--ink);
+  margin-bottom:48px;
+}
+h2 em{font-style:italic;font-weight:400;color:var(--sage)}
+.body-section p{
+  font-size:19px;
+  line-height:1.75;
+  color:var(--ink-soft);
+  margin-bottom:24px;
+  font-weight:400;
+}
+.body-section p strong{font-weight:600;color:var(--ink)}
+.kicker{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:32px;
+  color:var(--sage);
+  text-align:center;
+  margin-top:48px;
+  line-height:1.3;
+}
+
+/* PROBLEM LIST */
+.problem-list{
+  list-style:none;
+  margin:48px 0;
+  padding:0;
+}
+.problem-list li{
+  padding:24px 0 24px 32px;
+  border-top:1px solid var(--hair);
+  font-size:18px;
+  line-height:1.6;
+  color:var(--ink-soft);
+  position:relative;
+}
+.problem-list li:last-child{border-bottom:1px solid var(--hair)}
+.problem-list li::before{
+  content:'·';
+  position:absolute;
+  left:0;top:18px;
+  color:var(--sage);
+  font-size:32px;
+  line-height:1;
+  font-weight:600;
+}
+
+/* PULL QUOTE */
+.pull-quote{
+  padding:160px 24px;
+  text-align:center;
+  background:#fff;
+}
+.pull-quote.sage{background:var(--sage-soft)}
+.pull-quote.dark{background:var(--ink);color:#fff}
+.pull-quote.dark .quote-text{color:#fff}
+
+.quote-mark{
+  font-family:'Fraunces',serif;
+  font-size:72px;
+  color:var(--sage);
+  line-height:0;
+  font-style:italic;
+  display:block;
+  margin-bottom:48px;
+}
+.quote-text{
+  font-family:'Fraunces',serif;
+  font-weight:300;
+  font-style:italic;
+  font-size:clamp(28px,4.2vw,44px);
+  line-height:1.3;
+  letter-spacing:-0.01em;
+  color:var(--ink);
+  max-width:880px;
+  margin:0 auto;
+}
+
+/* DETAILS LIST */
+.details-list{list-style:none;margin-top:64px}
+.details-list li{
+  padding:32px 0;
+  border-top:1px solid var(--hair);
+  display:grid;
+  grid-template-columns:60px 1fr;
+  gap:32px;
+  align-items:baseline;
+}
+.details-list li:last-child{border-bottom:1px solid var(--hair)}
+.details-num{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:28px;
+  color:var(--sage);
+  line-height:1;
+}
+.details-text strong{
+  font-weight:600;display:block;margin-bottom:8px;
+  font-size:19px;color:var(--ink);font-family:'Inter',sans-serif;
+}
+.details-text{
+  font-family:'Inter',sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  color:var(--ink-soft);
+  font-weight:400;
+}
+
+/* DISCLAIMER BOX */
+.disclaimer{
+  max-width:680px;
+  margin:48px auto 0;
+  padding:32px;
+  background:rgba(167,123,0,.08);
+  border-left:3px solid var(--brand-gold);
+  border-radius:4px;
+}
+.disclaimer-label{
+  font-family:'Inter',sans-serif;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--brand-gold);
+  margin-bottom:14px;
+  display:block;
+}
+.disclaimer p{
+  font-size:15px;
+  line-height:1.7;
+  color:var(--ink-soft);
+  margin:0;
+}
+
+/* FAQ */
+.faq-section{padding:140px 24px;background:#fff}
+.faq-inner{max-width:680px;margin:0 auto}
+.faq-head{text-align:center;margin-bottom:64px}
+.faq-item{border-top:1px solid var(--hair);padding:0}
+.faq-item:last-child{border-bottom:1px solid var(--hair)}
+.faq-item summary{
+  font-family:'Fraunces',serif;
+  font-weight:400;
+  font-size:22px;
+  color:var(--ink);
+  cursor:pointer;
+  list-style:none;
+  padding:28px 40px 28px 0;
+  position:relative;
+}
+.faq-item summary::after{
+  content:'+';
+  position:absolute;
+  right:0;top:24px;
+  font-size:24px;
+  color:var(--sage);
+  font-family:'Inter',sans-serif;
+  font-weight:300;
+  transition:transform .25s;
+}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{
+  font-size:16px;
+  line-height:1.75;
+  color:var(--ink-soft);
+  padding:0 0 32px 0;
+}
+
+/* REGISTRATION */
+.register{
+  padding:160px 24px;
+  background:linear-gradient(180deg, var(--cream) 0%, var(--sage-mist) 100%);
+  text-align:center;
+  position:relative;
+}
+.register-inner{max-width:620px;margin:0 auto}
+.register-head .section-label{margin-bottom:24px}
+.register-lead{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-weight:300;
+  font-size:20px;
+  line-height:1.55;
+  color:var(--ink-soft);
+  margin:0 auto 48px;
+  max-width:520px;
+}
+.register-form-wrap{
+  max-width:680px;
+  margin:0 auto;
+  background:#fff;
+  padding:8px;
+  border-radius:12px;
+  box-shadow:0 16px 50px rgba(122,140,110,.15);
+  overflow:hidden;
+}
+.airtable-embed{
+  width:100%;
+  min-height:720px;
+  border:0;
+  border-radius:8px;
+  display:block;
+  background:#fafbf6;
+}
+@media(max-width:600px){.airtable-embed{min-height:900px}}
+.email-btn{
+  display:inline-block;
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#fff;
+  background:var(--ink);
+  padding:22px 56px;
+  transition:all .3s;
+  border:1px solid var(--ink);
+  border-radius:6px;
+}
+.email-btn:hover{background:var(--sage);border-color:var(--sage)}
+
+/* ALT SECTION */
+.alt-section{padding:140px 24px;background:var(--cream)}
+.alt-head{max-width:680px;margin:0 auto 64px;text-align:center}
+.alt-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:32px;
+  max-width:1080px;
+  margin:0 auto;
+}
+@media(max-width:780px){.alt-grid{grid-template-columns:1fr;gap:24px}}
+.alt-card{
+  display:block;text-decoration:none;color:inherit;
+  padding:40px 32px;background:#fff;
+  border:1px solid var(--hair);border-radius:8px;
+  transition:all .3s;position:relative;
+}
+.alt-card:hover{border-color:var(--sage);transform:translateY(-4px);box-shadow:0 16px 40px rgba(122,140,110,.1)}
+.alt-card:hover .alt-arrow{transform:translate(4px,-4px)}
+.alt-tag{
+  font-family:'Inter',sans-serif;font-size:10px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;color:var(--mute);
+  margin-bottom:18px;display:block;
+}
+.alt-card h3{
+  font-family:'Fraunces',serif;font-weight:400;font-style:italic;
+  font-size:28px;color:var(--ink);margin-bottom:16px;line-height:1.15;
+}
+.alt-card p{font-size:14px;line-height:1.65;color:var(--ink-soft);margin-bottom:18px}
+.alt-meta{
+  font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--mute);font-weight:500;display:block;
+  border-top:1px solid var(--hair);padding-top:14px;margin-top:14px;
+}
+.alt-arrow{
+  position:absolute;top:32px;right:32px;
+  color:var(--sage);font-size:20px;transition:transform .25s;
+}
+
+/* FOOTER */
+footer{
+  padding:80px 24px 48px;
+  background:#0d0d0d;
+  color:rgba(255,255,255,.6);
+  text-align:center;
+  font-size:13px;
+}
+footer .footer-brand{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:28px;
+  color:rgba(255,255,255,.9);
+  display:block;
+  margin-bottom:8px;
+}
+.footer-tagline{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:16px;
+  color:rgba(255,255,255,.5);
+  margin-bottom:32px;
+}
+.footer-links{
+  display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:32px;
+}
+.footer-links a{
+  color:rgba(255,255,255,.7);font-size:13px;
+  letter-spacing:1px;text-transform:uppercase;font-weight:500;
+}
+.footer-links a:hover{color:#fff}
+.footer-sep{margin:32px auto;height:1px;background:rgba(255,255,255,.1);max-width:200px}
+.footer-bottom{font-size:12px;color:rgba(255,255,255,.4)}
+.footer-bottom a{color:rgba(255,255,255,.5);text-decoration:underline;margin:0 6px}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="announce">
+  ✦ Online event zdarma · 25. června 2026 · 19:00 · max 10 žen
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-photo-wrap">
+    <div class="hero-photo"></div>
+  </div>
+  <div class="hero-content">
+    <span class="zdarma-tag">★ Zdarma online event</span>
+    <span class="eyebrow">Přines si jídlo, které nechceš jíst</span>
+    <h1>Sníme ho spolu.<br><em>Vědomě.</em></h1>
+    <p class="hero-sub">Sušenku, která tě pronásleduje. Čokoládu, co je zakázaná. Kousek něčeho, co si v noci dáváš tajně. Otevřeš laptop, posadíš se a my to dáme spolu.</p>
+    <a href="#prihlaska" class="cta-link">Chci být u toho →</a>
+    <p class="hero-micro">25. června 2026 · 19:00 · online přes Zoom · max 10 žen</p>
+  </div>
+</section>
+
+<!-- EVENT DETAILS STRIP -->
+<section class="event-strip">
+  <div class="event-strip-inner">
+    <div class="event-strip-item">
+      <span class="label">Datum</span>
+      <div class="value">25/6</div>
+      <p class="sub">2026</p>
+    </div>
+    <div class="event-strip-item">
+      <span class="label">Čas</span>
+      <div class="value">19:00</div>
+      <p class="sub">cca 90 minut</p>
+    </div>
+    <div class="event-strip-item">
+      <span class="label">Kde</span>
+      <div class="value">Online</div>
+      <p class="sub">přes Zoom</p>
+    </div>
+    <div class="event-strip-item">
+      <span class="label">Kapacita</span>
+      <div class="value">10 žen</div>
+      <p class="sub">max v kruhu</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM — Možná to znáš -->
+<section class="body-section cream">
+  <div class="body-inner center">
+    <div class="section-label">Možná to znáš</div>
+    <h2>Tahle sušenka tě <em>pronásleduje</em>.</h2>
+    <p style="max-width:560px;margin:0 auto 48px">Máš jídlo, které je „zakázané". Občas se k němu vrátíš tajně. Pak přijde výčitka. Pak slib, že už ne. Pak zase ano.</p>
+    <ul class="problem-list" style="text-align:left;max-width:540px;margin:0 auto">
+      <li>Občas se přejíš něčeho, co bys „neměla", a pak se cítíš špatně.</li>
+      <li>Schováváš si jídlo, abys ho mohla sníst sama. Bez svědků.</li>
+      <li>Chtěla bys to jednou zažít jinak. Bez strachu, bez viny.</li>
+      <li>Ale nevíš kde začít — a samotnou tě to děsí.</li>
+    </ul>
+    <p class="kicker">Tak to udělejme spolu.</p>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section class="pull-quote sage">
+  <span class="quote-mark">"</span>
+  <p class="quote-text">Žádná dieta. Žádný plán.<br>Jen jídlo a klid kolem něj.</p>
+</section>
+
+<!-- JAK TO BUDE -->
+<section class="body-section">
+  <div class="body-inner">
+    <div class="section-label" style="text-align:center">Jak to bude vypadat</div>
+    <h2 style="text-align:center">Čtyři jednoduché <em>kroky</em>.</h2>
+
+    <ul class="details-list">
+      <li>
+        <span class="details-num">i.</span>
+        <div class="details-text">
+          <strong>Přineseš si jídlo</strong>
+          To, které tě pronásleduje. Sušenku. Čokoládu. Kousek něčeho, co si schováváš. Není to test — je to gesto.
+        </div>
+      </li>
+      <li>
+        <span class="details-num">ii.</span>
+        <div class="details-text">
+          <strong>Krátký úvod do psychologie jídla</strong>
+          Jednou větou. Nepoučuju. Spíš ukazuju, kde tělo a hlava bojují — abys věděla, co se v tobě bude dít, až se ten první kousek otevře.
+        </div>
+      </li>
+      <li>
+        <span class="details-num">iii.</span>
+        <div class="details-text">
+          <strong>Vědomě sníme</strong>
+          Pomalu. V klidu. Společně. Žádné rady. Žádné komentáře. Jen tvoje pozornost, tvoje chuť a moje držení prostoru.
+        </div>
+      </li>
+      <li>
+        <span class="details-num">iv.</span>
+        <div class="details-text">
+          <strong>Prostor pro sdílení</strong>
+          Pokud chceš, řekneš co se v tobě dělo. Pokud nechceš, mlčíš. Obojí je v pořádku.
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- PRO KOHO -->
+<section class="body-section cream">
+  <div class="body-inner">
+    <div class="section-label" style="text-align:center">Je to pro tebe pokud…</div>
+    <h2 style="text-align:center">Cítíš se v tom <em>poznaná</em>.</h2>
+
+    <ul class="problem-list" style="margin-top:48px">
+      <li>Máš jídlo, které tě provází. Roky.</li>
+      <li>Po „zakázaném" se přejíš a pak se cítíš provinile.</li>
+      <li>Chtěla bys zažít jídlo bez strachu — alespoň jednou.</li>
+      <li>Něco se musí změnit, ale nevíš kde začít.</li>
+    </ul>
+    <p style="margin-top:48px;text-align:center;font-style:italic;color:var(--mute);max-width:520px;margin-left:auto;margin-right:auto;font-family:'Fraunces',serif;font-size:18px;line-height:1.5">Pokud tě jen jedno z toho oslovilo… patříš sem.</p>
+  </div>
+</section>
+
+<!-- KDO JSEM -->
+<section class="body-section">
+  <div class="body-inner">
+    <div class="section-label" style="text-align:center">Kdo to drží</div>
+    <h2 style="text-align:center">Jsem <em>Kateřina</em>.</h2>
+    <p>Zakladatelka HEALLO® a metody Somatic Nutritional Therapy®. Psychoterapeutka, health coach. <strong>Psychologii jídla</strong> jsem vystudovala u <strong>Marca Davida</strong> (Institute for the Psychology of Eating). Studuju u <strong>Evelyn Tribole</strong>, spoluautorky <em>Intuitive Eating</em>.</p>
+    <p>Ale to není důvod, proč mi ženy věří. Důvod je ten… <strong>že jsem tím prošla taky</strong>. Vím, jak chutná schovaný kousek čokolády ve 23 hodin. Vím, jak váží to ticho, ve kterém jíš.</p>
+    <p>Proto chci, abychom to spolu jednou zažily jinak. <strong>Bez plánu, bez kontroly, bez výčitek.</strong> Jen jídlo, klid a místo, kde nás nikdo nesoudí.</p>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="body-section cream" style="padding-top:0">
+  <div class="body-inner">
+    <div class="disclaimer">
+      <span class="disclaimer-label">⚠ Důležité</span>
+      <p>Tento event <strong>není terapie</strong> ani náhrada terapeutické péče. Pokud aktuálně procházíš diagnostikovanou poruchou příjmu potravy nebo jsi v péči specialisty, prosím konzultuj svou účast nejdřív s tím, kdo o tebe pečuje. Tvoje bezpečí je víc než jeden event.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-head">
+      <div class="section-label">Možná tě napadá</div>
+      <h2>Otázky, na které se ženy<br>ptají <em>nejčastěji</em>.</h2>
+    </div>
+    <details class="faq-item">
+      <summary>Co si mám přinést za jídlo?</summary>
+      <p>Cokoli, co tě „pronásleduje". Sušenku, čokoládu, kousek dortu, chips. Něco, co bys obvykle snědla rychle a tajně. Nebo něco, co odmítáš jíst vůbec. Žádné správné a špatné odpovědi. To, co cítíš, že tam patří.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Budu se muset něco sdílet nahlas?</summary>
+      <p>Ne. Sdílení je <strong>úplně dobrovolné</strong>. Pokud chceš mlčet a jen být v tom kruhu, je to v pořádku. Pokud chceš mluvit, máš prostor. Obojí je vítané.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Co když to s jídlem řeším dlouho a vážně?</summary>
+      <p>Pak prosím přečti znovu <strong>důležité upozornění</strong> výše. Tento event není terapie. Pokud aktuálně procházíš diagnostikovanou poruchou příjmu potravy, mluv nejdřív se svým specialistou. Bezpečí je víc než zážitek.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Jak se přihlásím?</summary>
+      <p>Vyplníš krátký formulář níže — jméno, email, a pokud chceš, můžeš mi napsat, co tě sem přivádí a jaké jídlo si chceš přinést. Není to test. Je to první kontakt mezi námi. Pošlu ti zpátky Zoom link a krátké uvítací slovo.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Bude záznam?</summary>
+      <p>Ne. Tenhle event nenahrávám. Sdílíme intimní moment u stolu a <strong>tvoje soukromí v něm je víc než cokoli dalšího</strong>. Pokud nemůžeš být live, sejdeme se příště znovu.</p>
+    </details>
+  </div>
+</section>
+
+<!-- REGISTRACE -->
+<section class="register" id="prihlaska">
+  <div class="register-inner">
+    <div class="register-head">
+      <div class="section-label">Přihlášení</div>
+      <h2>Chci tě tu <em>poznat</em>.</h2>
+      <p class="register-lead">Vyplň formulář dole. Není to test. Je to první kontakt mezi námi.<br>Pošlu ti zpátky Zoom link a krátké uvítací slovo.</p>
+    </div>
+
+    <!-- Airtable form embed -->
+    <div class="register-form-wrap">
+      <iframe
+        class="airtable-embed"
+        src="https://airtable.com/embed/appa8Q2n56u3THoJv/shroyJ1KfxCSgubti?backgroundColor=cream"
+        frameborder="0"
+        onmousewheel=""
+        title="Přihláška na event Sníme ho spolu">
+      </iframe>
+    </div>
+
+    <p style="margin-top:48px;font-size:13px;color:var(--mute)">Nebo mi napiš přímo na <a href="mailto:katerina@myheallo.info?subject=Sn%C3%ADme%20ho%20spolu%20%C2%B7%20chci%20se%20p%C5%99ihl%C3%A1sit&body=Ahoj%20Kate%C5%99ino%2C%0A%0Achci%20se%20p%C5%99ihl%C3%A1sit%20na%20event%2025.6.2026.%0A%0AJm%C3%A9no%3A%0A%0AJak%C3%A9%20j%C3%ADdlo%20chci%20p%C5%99in%C3%A9st%20(voliteln%C3%A9)%3A%0A%0ACo%20m%C4%9B%20sem%20p%C5%99iv%C3%A1d%C3%AD%20(voliteln%C3%A9)%3A%0A%0AD%C4%9Bkuju%2C" style="text-decoration:underline;color:var(--sage)">katerina@myheallo.info</a></p>
+  </div>
+</section>
+
+<!-- ALT — co dělám dál -->
+<section class="alt-section">
+  <div class="alt-head">
+    <div class="section-label">Pokud chceš víc</div>
+    <h2>Tohle je první krok. <em>Cesty jsou další</em>.</h2>
+    <p style="font-size:17px;color:var(--ink-soft);max-width:520px;margin:0 auto">Až tě event provede a budeš chtít pokračovat dál, mám pro tebe tři otevřené dveře.</p>
+  </div>
+
+  <div class="alt-grid">
+    <a href="https://jednosousto.myheallo.cc" class="alt-card">
+      <span class="alt-arrow">↗</span>
+      <span class="alt-tag">12 měsíců · skupina</span>
+      <h3>Jedno sousto</h3>
+      <p>Roční skupinový program intuitivního stravování. 12 setkání. Komunita po celou dobu. Pilotní cena do 30. června 2026.</p>
+      <span class="alt-meta">12 setkání · max 10 žen · 1 490 Kč</span>
+    </a>
+
+    <a href="https://cela.myheallo.cc" class="alt-card">
+      <span class="alt-arrow">↗</span>
+      <span class="alt-tag">1:1 · 3 měsíce</span>
+      <h3>CELÁ</h3>
+      <p>Tříměsíční individuální spolupráce. 6 setkání 1:1. Pro ženu, která chce hloubku víc než kohortu.</p>
+      <span class="alt-meta">3 měsíce · max 3 ženy · 55 000 Kč</span>
+    </a>
+
+    <a href="https://odkateriny.substack.com" class="alt-card">
+      <span class="alt-arrow">↗</span>
+      <span class="alt-tag">Substack · zdarma</span>
+      <h3>Od Kateřiny</h3>
+      <p>Pokud teď nehledáš spolupráci, jen čtení. Moje texty jsou každý týden tady.</p>
+      <span class="alt-meta">každý týden · odkateriny.substack.com</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-brand">HEALLO<em>®</em></span>
+  <p class="footer-tagline">Pro tělo, které volá po jiné péči.</p>
+  <div class="footer-links">
+    <a href="https://cela.myheallo.cc">CELÁ</a>
+    <a href="https://jednosousto.myheallo.cc">Jedno sousto</a>
+    <a href="https://365.myheallo.cc">HEALLO® 365</a>
+    <a href="https://pauza.myheallo.cc">Pauza</a>
+    <a href="https://odkateriny.substack.com">Substack</a>
+    <a href="https://instagram.com/myheallo" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  <div class="footer-sep"></div>
+  <div class="footer-bottom">
+    © 2026 Kateřina · <a href="mailto:katerina@myheallo.info">katerina@myheallo.info</a>
+  </div>
+</footer>
+
+</body>
+</html>
