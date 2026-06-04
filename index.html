@@ -328,13 +328,16 @@ h2 em{font-style:italic;font-weight:400;color:var(--sage)}
 .food-example-img{
   width:100%;
   aspect-ratio:1;
-  border-radius:18px;
+  border-radius:55% 45% 50% 50% / 60% 50% 50% 40%;
   background:url('images/ben-jerrys.jpg') center/cover;
   box-shadow:0 16px 40px rgba(122,140,110,.18);
   transform:rotate(-2deg);
-  transition:transform .3s ease;
+  transition:transform .3s ease, border-radius .8s ease;
 }
-.food-example-img:hover{transform:rotate(0deg) scale(1.02)}
+.food-example-img:hover{
+  transform:rotate(0deg) scale(1.02);
+  border-radius:45% 55% 60% 40% / 50% 55% 45% 50%;
+}
 .food-example-caption{
   margin-top:18px;
   font-family:'Fraunces',serif;
